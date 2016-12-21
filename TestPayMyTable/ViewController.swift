@@ -61,7 +61,14 @@ class ViewController: UIViewController {
             self.loadingView.stopLoader()
 
             switch result {
-            case .FAILURE:
+            case .FAILURE(let error):
+                
+                if let failureError = error as? NSError {
+                    let message = failureError.localizedDescription
+                    self.displayPopUp(message)
+
+                }
+                
                 self.displayPopUp(Constants.errorPopUpMessage)
                 break
             case .SUCCESS(let image):
@@ -75,6 +82,8 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
 
     private func displayPopUp(errorDescription : String) {
         let alert = UIAlertController(title: Constants.errorPopUpTitle, message: errorDescription, preferredStyle: .Alert)

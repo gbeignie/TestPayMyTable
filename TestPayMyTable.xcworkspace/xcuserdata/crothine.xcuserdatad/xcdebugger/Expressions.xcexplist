@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "HandwritingQuery.(getErrorMessageFromJson in _F69B6BAFE7A43D960D8860F778B5FB91)([String : AnyObject]) -&gt; ErrorType:HandwritingQuery.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "json[&quot;errors&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "errorsArray.firstItem">
+            </PersistentString>
+            <PersistentString
+               value = "json.first">
+            </PersistentString>
+            <PersistentString
+               value = "errorsArray">
+            </PersistentString>
+            <PersistentString
+               value = "json.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "HandwritingQuery.(renderTextInImage(String, width : CGFloat, completion : (StandardResult&lt;UIImage&gt;) -&gt; ()) -&gt; ()).(closure #1):HandwritingQuery.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

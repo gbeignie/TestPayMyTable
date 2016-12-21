@@ -47,15 +47,34 @@ class HandwritingQuery {
                 return
             }
             guard let image : UIImage = UIImage(data: data) else {
-                completion(.FAILURE(PMTError.ServerError))
-                return
+                do {
+                    let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0))
+                    guard let json = jsonObject as? [String: AnyObject] else {
+                        throw PMTError.ServerError
+                    }
+                    throw self.getErrorMessageFromJson(json)
+
+                }
+                catch {
+                    completion(.FAILURE(error))
+
+                    return
+                }
             }
             
             completion(.SUCCESS(image))
         }
     }
     
-    func retrieveCatalogList() -> Void {
+    private func getErrorMessageFromJson(json : [String: AnyObject]) -> ErrorType {
+
+        guard let errorsArray = json["errors"] as? [[String: AnyObject]] else { return PMTError.ServerError }
+        
+        guard errorsArray.count > 0 else { return PMTError.ServerError }
+        let firstError = errorsArray[0]
+        guard let errorMessage = firstError["error"] as? String else { return PMTError.ServerError }
+        
+        return NSError(domain: "serverError", code: -1, userInfo: [NSLocalizedDescriptionKey: errorMessage])
         
     }
         
