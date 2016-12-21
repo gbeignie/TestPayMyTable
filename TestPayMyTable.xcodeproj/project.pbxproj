@@ -12,11 +12,18 @@
 		92614A4E1E06FA55002DBD91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92614A4C1E06FA55002DBD91 /* Main.storyboard */; };
 		92614A501E06FA55002DBD91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92614A4F1E06FA55002DBD91 /* Assets.xcassets */; };
 		92614A531E06FA55002DBD91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92614A511E06FA55002DBD91 /* LaunchScreen.storyboard */; };
-		92614A5C1E070728002DBD91 /* HandwritingQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A5B1E070728002DBD91 /* HandwritingQuery.swift */; };
+		92614A5C1E070728002DBD91 /* HandwritingImageQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A5B1E070728002DBD91 /* HandwritingImageQuery.swift */; };
 		92614A601E0707A2002DBD91 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A5F1E0707A2002DBD91 /* LoaderView.swift */; };
 		92614A621E0707C5002DBD91 /* AutoLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A611E0707C5002DBD91 /* AutoLayoutHelper.swift */; };
 		92614A651E0707E3002DBD91 /* StandardResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A631E0707E3002DBD91 /* StandardResult.swift */; };
 		92614A661E0707E3002DBD91 /* SharedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92614A641E0707E3002DBD91 /* SharedError.swift */; };
+		926CBE1F1E0A7E65007775DA /* ChooseHandwritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE1E1E0A7E65007775DA /* ChooseHandwritingViewController.swift */; };
+		926CBE221E0A8052007775DA /* HandwritingsQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE211E0A8052007775DA /* HandwritingsQuery.swift */; };
+		926CBE241E0A80D9007775DA /* HandwritingsJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE231E0A80D9007775DA /* HandwritingsJsonParser.swift */; };
+		926CBE271E0A80F3007775DA /* Handwriting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE261E0A80F3007775DA /* Handwriting.swift */; };
+		926CBE291E0A83FD007775DA /* HandwritingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE281E0A83FD007775DA /* HandwritingManager.swift */; };
+		926CBE2C1E0A8679007775DA /* HandwritingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CBE2A1E0A8679007775DA /* HandwritingTableViewCell.swift */; };
+		926CBE2D1E0A8679007775DA /* HandwritingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926CBE2B1E0A8679007775DA /* HandwritingTableViewCell.xib */; };
 		92CFF8B71E0882C700DF33E3 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CFF8B61E0882C700DF33E3 /* imageViewController.swift */; };
 		B9ADFF8316C2F574F3232A5C /* Pods_TestPayMyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EA89795228F14D208D5BE3D /* Pods_TestPayMyTable.framework */; };
 /* End PBXBuildFile section */
@@ -30,11 +37,18 @@
 		92614A4F1E06FA55002DBD91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92614A521E06FA55002DBD91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92614A541E06FA55002DBD91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92614A5B1E070728002DBD91 /* HandwritingQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingQuery.swift; sourceTree = "<group>"; };
+		92614A5B1E070728002DBD91 /* HandwritingImageQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingImageQuery.swift; sourceTree = "<group>"; };
 		92614A5F1E0707A2002DBD91 /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		92614A611E0707C5002DBD91 /* AutoLayoutHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutHelper.swift; sourceTree = "<group>"; };
 		92614A631E0707E3002DBD91 /* StandardResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardResult.swift; sourceTree = "<group>"; };
 		92614A641E0707E3002DBD91 /* SharedError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedError.swift; sourceTree = "<group>"; };
+		926CBE1E1E0A7E65007775DA /* ChooseHandwritingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseHandwritingViewController.swift; sourceTree = "<group>"; };
+		926CBE211E0A8052007775DA /* HandwritingsQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingsQuery.swift; sourceTree = "<group>"; };
+		926CBE231E0A80D9007775DA /* HandwritingsJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingsJsonParser.swift; sourceTree = "<group>"; };
+		926CBE261E0A80F3007775DA /* Handwriting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Handwriting.swift; sourceTree = "<group>"; };
+		926CBE281E0A83FD007775DA /* HandwritingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingManager.swift; sourceTree = "<group>"; };
+		926CBE2A1E0A8679007775DA /* HandwritingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandwritingTableViewCell.swift; sourceTree = "<group>"; };
+		926CBE2B1E0A8679007775DA /* HandwritingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandwritingTableViewCell.xib; sourceTree = "<group>"; };
 		92CFF8B61E0882C700DF33E3 /* imageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
 		B5C2A81E4B812A7B356024A1 /* Pods-TestPayMyTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPayMyTable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestPayMyTable/Pods-TestPayMyTable.debug.xcconfig"; sourceTree = "<group>"; };
 		CE430552A38BDCA20D4EB41E /* Pods-TestPayMyTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestPayMyTable.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestPayMyTable/Pods-TestPayMyTable.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 		92614A471E06FA55002DBD91 /* TestPayMyTable */ = {
 			isa = PBXGroup;
 			children = (
+				926CBE1D1E0A7E41007775DA /* Choose Handwriting */,
 				92614A5E1E070756002DBD91 /* Utils */,
 				92614A5A1E0706D7002DBD91 /* Web */,
 				92614A481E06FA55002DBD91 /* AppDelegate.swift */,
@@ -97,7 +112,7 @@
 		92614A5A1E0706D7002DBD91 /* Web */ = {
 			isa = PBXGroup;
 			children = (
-				92614A5B1E070728002DBD91 /* HandwritingQuery.swift */,
+				92614A5B1E070728002DBD91 /* HandwritingImageQuery.swift */,
 			);
 			name = Web;
 			sourceTree = "<group>";
@@ -111,6 +126,36 @@
 				92614A5F1E0707A2002DBD91 /* LoaderView.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		926CBE1D1E0A7E41007775DA /* Choose Handwriting */ = {
+			isa = PBXGroup;
+			children = (
+				926CBE251E0A80E4007775DA /* Model */,
+				926CBE201E0A802F007775DA /* Web */,
+				926CBE1E1E0A7E65007775DA /* ChooseHandwritingViewController.swift */,
+				926CBE2A1E0A8679007775DA /* HandwritingTableViewCell.swift */,
+				926CBE2B1E0A8679007775DA /* HandwritingTableViewCell.xib */,
+			);
+			name = "Choose Handwriting";
+			sourceTree = "<group>";
+		};
+		926CBE201E0A802F007775DA /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				926CBE211E0A8052007775DA /* HandwritingsQuery.swift */,
+				926CBE231E0A80D9007775DA /* HandwritingsJsonParser.swift */,
+				926CBE281E0A83FD007775DA /* HandwritingManager.swift */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		926CBE251E0A80E4007775DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				926CBE261E0A80F3007775DA /* Handwriting.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		A1AA04BE5222680B1A65C65E /* Pods */ = {
@@ -187,6 +232,7 @@
 				92614A531E06FA55002DBD91 /* LaunchScreen.storyboard in Resources */,
 				92614A501E06FA55002DBD91 /* Assets.xcassets in Resources */,
 				92614A4E1E06FA55002DBD91 /* Main.storyboard in Resources */,
+				926CBE2D1E0A8679007775DA /* HandwritingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +295,16 @@
 				92614A4B1E06FA55002DBD91 /* ViewController.swift in Sources */,
 				92614A601E0707A2002DBD91 /* LoaderView.swift in Sources */,
 				92614A661E0707E3002DBD91 /* SharedError.swift in Sources */,
-				92614A5C1E070728002DBD91 /* HandwritingQuery.swift in Sources */,
+				926CBE221E0A8052007775DA /* HandwritingsQuery.swift in Sources */,
+				926CBE291E0A83FD007775DA /* HandwritingManager.swift in Sources */,
+				92614A5C1E070728002DBD91 /* HandwritingImageQuery.swift in Sources */,
+				926CBE241E0A80D9007775DA /* HandwritingsJsonParser.swift in Sources */,
 				92614A491E06FA55002DBD91 /* AppDelegate.swift in Sources */,
 				92CFF8B71E0882C700DF33E3 /* imageViewController.swift in Sources */,
+				926CBE1F1E0A7E65007775DA /* ChooseHandwritingViewController.swift in Sources */,
+				926CBE2C1E0A8679007775DA /* HandwritingTableViewCell.swift in Sources */,
 				92614A651E0707E3002DBD91 /* StandardResult.swift in Sources */,
+				926CBE271E0A80F3007775DA /* Handwriting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

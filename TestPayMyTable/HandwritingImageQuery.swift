@@ -1,5 +1,5 @@
 //
-//  HandwritingQuery.swift
+//  HandwritingImageQuery.swift
 //  TestPayMyTable
 //
 //  Created by Gauthier et Cathine on 18/12/2016.
@@ -9,30 +9,30 @@
 import Foundation
 import Alamofire
 
-class HandwritingQuery {
+class HandwritingImageQuery {
     
     struct Constants {
-        static let handwritingBaseURL = "https://api.handwriting.io"
-        static let handwritingRenderURL = "/render/png"
+        static let handwritingImageBaseURL = "https://api.handwriting.io"
+        static let handwritingImageRenderURL = "/render/png"
         
-        static let handwritingIdParameter = "handwriting_id"
-        static let handwritingTextParameter = "text"
-        static let handwritingWidthParameter = "width"
-        static let handwritingHeightParameter = "height"
+        static let handwritingImageIdParameter = "handwriting_id"
+        static let handwritingImageTextParameter = "text"
+        static let handwritingImageWidthParameter = "width"
+        static let handwritingImageHeightParameter = "height"
         
         static let user = "MT9V1KQW1V8A5FXF"
         static let password = "TP63F27MM8A01EBQ"
     }
     
-    func renderTextInImage(text : String, width : CGFloat, completion: (StandardResult<UIImage>) -> Void) -> Void {
+    func renderTextInImage(text : String, width : CGFloat, handwriting : Handwriting?, completion: (StandardResult<UIImage>) -> Void) -> Void {
         
-        let url = Constants.handwritingBaseURL + Constants.handwritingRenderURL
+        let url = Constants.handwritingImageBaseURL + Constants.handwritingImageRenderURL
         
         let parameters = [
-            Constants.handwritingIdParameter : "2D5QW0F80001",
-            Constants.handwritingTextParameter : text,
-            Constants.handwritingWidthParameter : String(width) + "px",
-            Constants.handwritingHeightParameter : "auto"
+            Constants.handwritingImageIdParameter : handwriting == nil ? "2D5QW0F80001" : handwriting!.id,
+            Constants.handwritingImageTextParameter : text,
+            Constants.handwritingImageWidthParameter : String(width) + "px",
+            Constants.handwritingImageHeightParameter : "auto"
         ]
         
         Alamofire.request(.GET, url, parameters: parameters).authenticate(user: Constants.user, password: Constants.password).responseData { (response : Response<NSData, NSError>) in

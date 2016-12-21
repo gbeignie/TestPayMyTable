@@ -38,8 +38,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-mA-ZKf">
-                                <rect key="frame" x="16" y="275" width="343" height="342"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-mA-ZKf">
+                                <rect key="frame" x="16" y="134" width="343" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -59,35 +59,92 @@
                                     <action selector="sendButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOx-pz-DSU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Saisir le texte :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-W7-jYf">
-                                <rect key="frame" x="16" y="235" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saisir le texte :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-W7-jYf">
+                                <rect key="frame" x="16" y="105" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handwriting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-Qf-p4V">
+                                <rect key="frame" x="16" y="74" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-as-4ye">
+                                <rect key="frame" x="289" y="74" width="60" height="30"/>
+                                <state key="normal" title="Button &gt;"/>
+                                <connections>
+                                    <action selector="selectHandwritingButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JNQ-WU-ekm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J7F-mP-NEJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="144" id="3bf-VH-qAC"/>
+                            <constraint firstItem="XvN-as-4ye" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="4BM-Uj-PwY"/>
                             <constraint firstItem="dnW-mA-ZKf" firstAttribute="top" secondItem="ro7-W7-jYf" secondAttribute="bottom" constant="8" id="EF3-Cm-SOf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J7F-mP-NEJ" secondAttribute="bottom" constant="10" id="HCZ-gB-ZxH"/>
-                            <constraint firstItem="ro7-W7-jYf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Num-Rs-KAT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XvN-as-4ye" secondAttribute="trailing" constant="10" id="HL7-cP-mwZ"/>
+                            <constraint firstItem="a7C-Qf-p4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="OTL-c7-GXb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dnW-mA-ZKf" secondAttribute="trailing" id="UEV-9F-bLb"/>
                             <constraint firstItem="ro7-W7-jYf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YQL-u5-Z3r"/>
+                            <constraint firstItem="ro7-W7-jYf" firstAttribute="leading" secondItem="a7C-Qf-p4V" secondAttribute="leading" id="bQR-Cd-gyr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J7F-mP-NEJ" secondAttribute="trailing" constant="144" id="dVg-2U-JeF"/>
                             <constraint firstItem="dnW-mA-ZKf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eVn-dl-u33"/>
+                            <constraint firstItem="ro7-W7-jYf" firstAttribute="top" secondItem="a7C-Qf-p4V" secondAttribute="bottom" constant="10" id="lqe-hj-8Hk"/>
                             <constraint firstItem="J7F-mP-NEJ" firstAttribute="top" secondItem="dnW-mA-ZKf" secondAttribute="bottom" constant="10" id="tUQ-ho-a8Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="p8t-S5-T0a"/>
                     <connections>
+                        <outlet property="handwritingButton" destination="XvN-as-4ye" id="JhE-5Q-e7c"/>
                         <outlet property="sendButton" destination="J7F-mP-NEJ" id="U0z-ZH-a1P"/>
                         <outlet property="textView" destination="dnW-mA-ZKf" id="phA-H4-ky2"/>
+                        <segue destination="c7o-0V-Rqx" kind="show" identifier="HandwritingListSegue" id="vG3-B7-mez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="36.431784107946029"/>
+        </scene>
+        <!--Choose Handwriting View Controller-->
+        <scene sceneID="S0y-UT-dsf">
+            <objects>
+                <viewController id="c7o-0V-Rqx" customClass="ChooseHandwritingViewController" customModule="TestPayMyTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Uk-16-ow5"/>
+                        <viewControllerLayoutGuide type="bottom" id="uVV-eb-TxR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="tpV-p6-SxR">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g4D-In-M9g">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="c7o-0V-Rqx" id="YJz-xm-7Jj"/>
+                                    <outlet property="delegate" destination="c7o-0V-Rqx" id="iNf-pD-46w"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g4D-In-M9g" firstAttribute="leading" secondItem="tpV-p6-SxR" secondAttribute="leading" id="Ibm-Yn-zCn"/>
+                            <constraint firstItem="uVV-eb-TxR" firstAttribute="top" secondItem="g4D-In-M9g" secondAttribute="bottom" id="KhB-ID-YUM"/>
+                            <constraint firstAttribute="trailing" secondItem="g4D-In-M9g" secondAttribute="trailing" id="TbF-di-Bwp"/>
+                            <constraint firstItem="g4D-In-M9g" firstAttribute="top" secondItem="8Uk-16-ow5" secondAttribute="bottom" id="nVm-eu-1RB"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="handwritingsTableView" destination="g4D-In-M9g" id="15t-5a-tvi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHc-3o-LDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="36"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="U3d-cv-mRr">
@@ -105,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPu-np-dOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="36.431784107946029"/>
+            <point key="canvasLocation" x="65" y="713"/>
         </scene>
     </scenes>
 </document>
