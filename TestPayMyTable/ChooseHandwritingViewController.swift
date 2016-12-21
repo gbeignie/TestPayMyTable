@@ -18,8 +18,6 @@ class ChooseHandwritingViewController: UIViewController, UITableViewDelegate, UI
         static var errorPopUpButton                     = "Réessayer"
         static var imageViewControllerIdentifier        = "imageVC"
         static var HandwritingPreviewText               = "Dear John, Millie, and team,\n\nAs we look back upon the past year, we would like to acknowledge those who have helped us shape our business. Thanks for a great year, and we wish you all the best as you embark on 2017.\n\nAll the best,\n        The team at Handwriting.io"
-        static var cartViewHeight : CGFloat             = 40
-        static let animationDuration: NSTimeInterval    = 0.5
         
     }
     @IBOutlet weak var handwritingsTableView: UITableView!
